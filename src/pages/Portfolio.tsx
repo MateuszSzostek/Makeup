@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 
 import Masonry from 'react-masonry-css'
 import { SRLWrapper } from "simple-react-lightbox";
-import LandingImg from '../img/landingImg.jpg';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 export default ({transition}) => {
  
@@ -18,26 +18,15 @@ export default ({transition}) => {
           breakpointCols={4}
           className="my-masonry-grid"
           columnClassName="my-masonry-grid_column">
-            <div><a href="https://picsum.photos/200/300"><img src="https://picsum.photos/200/300"></img></a></div>
-            <div><a href="https://picsum.photos/300/300"><img src="https://picsum.photos/300/300"></img></a></div>
-            <div><a href="https://picsum.photos/400/300"><img src="https://picsum.photos/400/300"></img></a></div>
-            <div><a href="https://picsum.photos/200/400"><img src="https://picsum.photos/200/400"></img></a></div>
-            <div><a href="https://picsum.photos/250/300"><img src="https://picsum.photos/250/300"></img></a></div>
-            <div><a href="https://picsum.photos/200/350"><img src="https://picsum.photos/200/350"></img></a></div>
-            <div><a href="https://picsum.photos/200/300"><img src="https://picsum.photos/200/300"></img></a></div>
-            <div><a href="https://picsum.photos/300/300"><img src="https://picsum.photos/300/300"></img></a></div>
-            <div><a href="https://picsum.photos/400/300"><img src="https://picsum.photos/400/300"></img></a></div>
-            <div><a href="https://picsum.photos/200/400"><img src="https://picsum.photos/200/400"></img></a></div>
-            <div><a href="https://picsum.photos/250/300"><img src="https://picsum.photos/250/300"></img></a></div>
-            <div><a href="https://picsum.photos/200/350"><img src="https://picsum.photos/200/350"></img></a></div>
-            <div><a href="https://picsum.photos/200/300"><img src="https://picsum.photos/200/300"></img></a></div>
-            <div><a href="https://picsum.photos/300/300"><img src="https://picsum.photos/300/300"></img></a></div>
-            <div><a href="https://picsum.photos/400/300"><img src="https://picsum.photos/400/300"></img></a></div>
-            <div><a href="https://picsum.photos/200/400"><img src="https://picsum.photos/200/400"></img></a></div>
-            <div><a href="https://picsum.photos/250/300"><img src="https://picsum.photos/250/300"></img></a></div>
-            <div><a href="https://picsum.photos/200/350"><img src="https://picsum.photos/200/350"></img></a></div>
-            
-            
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>
+            <div><a href="https://picsum.photos/200/300"><LazyLoadImage width={"200px"} height={"300px"}alt={"test image"}src={"https://picsum.photos/200/300"}/></a></div>                     
           {/* array of JSX items */}
         </Masonry>
         </SRLWrapper>

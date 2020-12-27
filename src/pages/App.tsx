@@ -57,9 +57,9 @@ function App() {
             </div>
           </div>
           <div className="social-media row flex-container justify-content-center align-items-center">
-            <img src={FacebookImg}></img>
-            <img src={InstagramImg}></img>
-            <img src={PinterestImg}></img>
+            <img className="facebook-hover" src={FacebookImg}></img>
+            <img className="instagram-hover" src={InstagramImg}></img>
+            <img className="pinterest-hover" src={PinterestImg}></img>
           </div>
         </div>
         <div className="col flex-container align-items-center">
