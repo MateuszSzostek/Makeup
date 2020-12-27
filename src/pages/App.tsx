@@ -11,6 +11,7 @@ import Contact from './Contact';
 import FacebookImg from '../img/facebook.svg';
 import InstagramImg from '../img/instagram.svg';
 import PinterestImg from '../img/pinterest.svg';
+import SimpleReactLightbox from 'simple-react-lightbox'
 
 function App() {
   let location = useLocation();
@@ -39,7 +40,7 @@ function App() {
   }
 
   return (
-    <React.Fragment>
+    <SimpleReactLightbox>
       <div className="background-text">
           <h1>Makeup</h1>
       </div>
@@ -89,7 +90,7 @@ function App() {
     <div>
       <footer className="footer">Created with passion by Mateusz Szostek</footer>
   </div>
-  </React.Fragment>
+  </SimpleReactLightbox>
     /*
     <div className="flex-container col align-items-center">
       <div className="flex-container col app-container">
