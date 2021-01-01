@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useLocation, Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 import AOS from "aos";
 import 'aos/dist/aos.css';
@@ -8,12 +8,16 @@ import Home from './Home';
 import Offer from './Offer';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
-import FacebookImg from '../img/facebook.svg';
-import InstagramImg from '../img/instagram.svg';
-import PinterestImg from '../img/pinterest.svg';
+import FacebookImgL from '../img/facebook_light.svg';
+import InstagramImgL from '../img/instagram_light.svg';
+import PinterestImgL from '../img/pinterest_light.svg';
 import SimpleReactLightbox from 'simple-react-lightbox'
 
 function App() {
+  let [menuOpen, setMenuOpen] = useState(false);
+  let [menuClose, setMenuClose] = useState(false);
+  let [menuHover, setMenuHover] = useState(false);
+
   let location = useLocation();
   let linksData = [
     { id: 1, link: "/", page: "Home" },
@@ -21,7 +25,40 @@ function App() {
     { id: 3, link: "/portfolio", page: "Portfolio" },
     { id: 4, link: "/contact", page: "Contact" },
   ];
-  let links = linksData.map(s => <Link key={s.id} to={s.link}>{s.page}</Link>)
+
+  let handleClickMenuBtn = () => {
+    if (!menuOpen) {
+      setMenuOpen(true)
+    }
+    else {
+      console.log("wlaczam sie ");
+      setMenuClose(true);
+      setTimeout(()=>{
+        setMenuOpen(false);
+        setMenuClose(false);
+      },
+      300)
+    }
+  }
+  let handleMouseEnterMenuBtn = () => {
+    if (!menuHover) {
+      setMenuHover(true);
+    }
+  }
+  let handleMouseLeaveMenuBtn = () => {
+    if (menuHover) {
+      setMenuHover(false);
+    }
+  }
+  let handleClickLinkBtn = () => {
+    setMenuOpen(false);
+    console.log("dzialam");
+    setTimeout(()=> {
+      window.scrollTo(0,0);
+    },300);
+  }
+
+  let links = linksData.map(s => <Link key={s.id} to={s.link} onClick={(handleClickLinkBtn)}>{s.page}</Link>)
   let routes = linksData.map(s => <Route key={s.id} path={s.link}></Route>);
 
   const pageTransition = {
@@ -42,99 +79,63 @@ function App() {
   return (
     <SimpleReactLightbox>
       <div className="background-text">
-          <h1>Makeup</h1>
+        <h1>Makeup</h1>
       </div>
-    <div className="app-container flex-container justify-content-center">
-      <div className="page-container">
-        <div className="nav-container flex-container row justify-content-between">
-          <div className="col flex-container justify-content-center">
-            <h1>Anna Dorsch</h1>
-            <h2>MAKEUP</h2>
-          </div>
-          <div className="nav col flex-container justify-content-center align-items-center">
-            <div className="row">
-              {links}
+      <div className="app-container flex-container justify-content-center">
+        <div className="page-container">
+          <div className="nav-container">
+            <div className="col flex-container justify-content-center">
+              <h1>Anna Dorsch</h1>
+            </div>
+            <div className={"nav" + (menuOpen ? " active" : "")}>
+              <div className={"nav-item" + (menuClose ? " close" : "") + (menuOpen ? " active" : "")}>
+                {links}
+              </div>
+            </div>
+            <div className={"social-media" + (menuOpen ? " active" : "")}>
+              <img className="facebook-hover" src={FacebookImgL}></img>
+              <img className="instagram-hover" src={InstagramImgL}></img>
+              <img className="pinterest-hover" src={PinterestImgL}></img>
+            </div>
+            <div className={"menu-button" + (menuOpen ? " open" : "") +
+              (menuHover ? " hover" : "")} 
+              onMouseEnter={handleMouseEnterMenuBtn}
+              onClick={handleClickMenuBtn}
+              onMouseLeave={handleMouseLeaveMenuBtn}>
+              <div className="menu-element"></div>
+              <div className="menu-element"></div>
+              <div className="menu-element"></div>
             </div>
           </div>
-          <div className="social-media row flex-container justify-content-center align-items-center">
-            <img className="facebook-hover" src={FacebookImg}></img>
-            <img className="instagram-hover" src={InstagramImg}></img>
-            <img className="pinterest-hover" src={PinterestImg}></img>
+          <div className="col flex-container align-items-center">
+            <AnimatePresence exitBeforeEnter>
+              <Switch location={location} key={location.pathname}>
+                <Route exact path="/">
+                  <Home transition={pageTransition} />
+                </Route>
+                <Route path="/offer">
+                  <Offer transition={pageTransition} />
+                </Route>
+                <Route path="/portfolio">
+                  <Portfolio transition={pageTransition} />
+                </Route>
+                <Route path="/contact">
+                  <Contact transition={pageTransition} />
+                </Route>
+              </Switch>
+            </AnimatePresence>
           </div>
-        </div>
-        <div className="col flex-container align-items-center">
-          <AnimatePresence exitBeforeEnter>
-            <Switch location={location} key={location.pathname}>
-              <Route exact path="/">
-                <Home transition={pageTransition} />
-              </Route>
-              <Route path="/offer">
-                <Offer transition={pageTransition} />
-              </Route>
-              <Route path="/portfolio">
-                <Portfolio transition={pageTransition} />
-              </Route>
-              <Route path="/contact">
-                <Contact transition={pageTransition} />
-              </Route>
-            </Switch>
-          </AnimatePresence>
         </div>
       </div>
-    </div>
-    <div className="bottom-links flex-container align-items-center justify-content-center">
-      <div className="row">
-        {links}
-      </div>
-    </div>
-    <div>
-      <footer className="footer">Created with passion by Mateusz Szostek</footer>
-  </div>
-  </SimpleReactLightbox>
-    /*
-    <div className="flex-container col align-items-center">
-      <div className="flex-container col app-container">
-        <div className="nav-container flex-container row ">
-          <div className="logo">
-            <img src=""></img>
-          </div>
-          <div className="logo-name col">
-            <h1>ANNA DORSCH</h1>
-            <h2>MAKE UP</h2>
-          </div>
-          <div className="nav-container flex-container row justify-content-center align-items-center nav">
-            {links}
-          </div>
-          <div className="social-media flex-container justify-content-right">
-            <img src={FacebookImg}></img>
-            <img src={InstagramImg}></img>
-            <img src={PinterestImg}></img>
-          </div>
-        </div>   
-        <div className="content-container col flex-container align-items-center"> 
-        <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route exact path="/">
-            <Home transition={pageTransition}/>
-          </Route>
-          <Route path="/offer">
-            <Offer transition={pageTransition}/>
-          </Route>
-          <Route path="/portfolio">
-            <Portfolio transition={pageTransition}/>
-          </Route>
-          <Route path="/contact">
-            <Contact transition={pageTransition}/>
-          </Route>
-        </Switch>
-        </AnimatePresence>
-        </div>
+      <div className="bottom-links flex-container align-items-center justify-content-center row">
         <div>
-          <footer className="footer">Created with passion by Mateusz Szostek</footer>
+          {links}
         </div>
       </div>
-    </div>
-    */
+      <div>
+        <footer className="footer">Created with passion by Mateusz Szostek</footer>
+      </div>
+    </SimpleReactLightbox>
   )
 }
 export default App;

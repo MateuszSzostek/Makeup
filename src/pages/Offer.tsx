@@ -7,7 +7,7 @@ export default function Offer({ transition }) {
   return (
     <React.Fragment>
       <motion.div initial="out" animate="in" exit="out" variants={transition}>
-        <div className="section-container flex-container row">
+        <div className="offer-container shadow-container flex-container row">
           <div className="offer-text flex-container col">
             <div>
               <h2>MAKEUP</h2>

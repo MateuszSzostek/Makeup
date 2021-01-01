@@ -8,7 +8,7 @@ export default ({transition}) => {
   return(
     <React.Fragment>
       <motion.div initial="out" animate="in" exit="out" variants={transition}>
-      <div className="content-container flex-container row justify-content-between align-items-center contact-decoration mb-120 mt-60">
+      <div className="content-container flex-container row justify-content-between align-items-center contact-decoration mb-120">
         <ContactForm/>
       </div>
       </motion.div>
