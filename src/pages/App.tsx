@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { useLocation, Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
+import {Route, Switch, Link, BrowserRouter as Router } from "react-router-dom";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -18,7 +18,6 @@ function App() {
   let [menuClose, setMenuClose] = useState(false);
   let [menuHover, setMenuHover] = useState(false);
 
-  let location = useLocation();
   let linksData = [
     { id: 1, link: "/", page: "Home" },
     { id: 2, link: "/offer", page: "Offer" },
@@ -26,18 +25,25 @@ function App() {
     { id: 4, link: "/contact", page: "Contact" },
   ];
 
+  function getWidth() {
+    return Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+  }
+
   let handleClickMenuBtn = () => {
-    if (!menuOpen) {
-      setMenuOpen(true)
-    }
-    else {
-      console.log("wlaczam sie ");
-      setMenuClose(true);
-      setTimeout(()=>{
-        setMenuOpen(false);
-        setMenuClose(false);
-      },
-      300)
+    console.log(getWidth());
+    if(getWidth() < 1200){
+      if (!menuOpen) {
+        setMenuOpen(true)
+      }
+      else {
+        console.log("wlaczam sie ");
+        setMenuClose(true);
+        setTimeout(()=>{
+          setMenuOpen(false);
+          setMenuClose(false);
+        },
+        300)
+      }
     }
   }
   let handleMouseEnterMenuBtn = () => {
@@ -51,11 +57,16 @@ function App() {
     }
   }
   let handleClickLinkBtn = () => {
-    setMenuOpen(false);
+    if(getWidth() < 1200)
+    {
+      setMenuClose(true);
     console.log("dzialam");
     setTimeout(()=> {
+      setMenuOpen(false);
+        setMenuClose(false);
       window.scrollTo(0,0);
     },300);
+    }
   }
 
   let links = linksData.map(s => <Link key={s.id} to={s.link} onClick={(handleClickLinkBtn)}>{s.page}</Link>)
@@ -109,7 +120,7 @@ function App() {
           </div>
           <div className="col flex-container align-items-center">
             <AnimatePresence exitBeforeEnter>
-              <Switch location={location} key={location.pathname}>
+              <Switch>
                 <Route exact path="/">
                   <Home transition={pageTransition} />
                 </Route>
