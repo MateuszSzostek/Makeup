@@ -6,8 +6,10 @@ import {motion} from 'framer-motion';
 import Masonry from 'react-masonry-css'
 import { SRLWrapper } from "simple-react-lightbox";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { RouteComponentProps } from "@reach/router";
+import Layout from "./Layout";
 
-export default ({transition}) => {
+let Portfolio = ()=> {
   const breakpointColumnsObj = {
     default:4,
     1200: 3,
@@ -15,8 +17,8 @@ export default ({transition}) => {
     500: 1
   };
   return(
-    <React.Fragment>
-      <motion.div initial="out" animate="in" exit="out" variants={transition}>
+    <Layout>
+      <motion.div initial="out" animate="in" exit="out">
       <div className="portfolio-container shadow-container">
       <SRLWrapper>
         <Masonry
@@ -37,6 +39,7 @@ export default ({transition}) => {
         </SRLWrapper>
       </div>
       </motion.div>
-    </React.Fragment>
+    </Layout>
   )
 }
+export default Portfolio;

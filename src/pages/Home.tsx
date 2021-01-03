@@ -5,16 +5,18 @@ import LandingImg from '../img/landingImg.jpg';
 import TestImg1 from '../img/Sorbet-feat-2-e1597402671848.jpg';
 import TestImg2 from '../img/Beauty-Industry-after-Coronavirus-Pandemic-265w.jpg';
 import TestImg3 from '../img/AdobeStock_182179216.jpeg';
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import Arrow from '../img/down-arrow.svg';
 import { motion } from 'framer-motion';
 import ContactForm from './ContactForm';
+import Layout from "./Layout";
 
-export default function Home({ transition }) {
+
+let Home = ()=>
+{
   return (
-    <React.Fragment>
-      <motion.div initial="out" animate="in" exit="out" variants={transition}>
-       
+    <Layout>
+      <motion.div initial="out" animate="in" exit="out" >
           <div className="section-container flex-container row ">
             <div className="home-image flex-container col">
               <img src={LandingImg}></img>
@@ -70,6 +72,7 @@ export default function Home({ transition }) {
           </div>
         
       </motion.div>
-    </React.Fragment>
+    </Layout>
   )
 }
+export default Home;

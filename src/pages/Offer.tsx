@@ -2,11 +2,20 @@ import React from "react"
 import 'aos/dist/aos.css';
 import '../css/styles.css'
 import { motion } from 'framer-motion';
+import { RouteComponentProps } from "@reach/router";
+import Layout from "./Layout";
 
-export default function Offer({ transition }) {
-  return (
-    <React.Fragment>
-      <motion.div initial="out" animate="in" exit="out" variants={transition}>
+interface TransitionProps extends RouteComponentProps
+{
+	 transition?: any;
+}
+
+let Offer = (props: TransitionProps) =>
+{
+
+  return(
+    <Layout>
+      <motion.div initial="out" animate="in" exit="out">
         <div className="offer-container shadow-container flex-container row">
           <div className="offer-text flex-container col">
             <div>
@@ -30,6 +39,7 @@ export default function Offer({ transition }) {
           </div>
         </div>
       </motion.div>
-    </React.Fragment>
+    </Layout>
   )
 }
+export default Offer;
