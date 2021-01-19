@@ -10,6 +10,9 @@ import PinterestImgL from '../img/pinterest_light.svg';
 import SimpleReactLightbox from 'simple-react-lightbox'
 
 export default ({children}) => {
+
+ 
+  
   let [menuOpen, setMenuOpen] = useState(false);
   let [menuClose, setMenuClose] = useState(false);
   let [menuHover, setMenuHover] = useState(false);
@@ -38,7 +41,7 @@ export default ({children}) => {
           setMenuOpen(false);
           setMenuClose(false);
         },
-        300)
+        0)
       }
     }
   }
@@ -61,7 +64,7 @@ export default ({children}) => {
       setMenuOpen(false);
         setMenuClose(false);
       window.scrollTo(0,0);
-    },300);
+    },0);
     }
   }
 
@@ -81,6 +84,7 @@ export default ({children}) => {
       ease: "ease",
     },
   }
+
   let updatedChildren = React.Children.map(children,
     (child) => {
         return React.cloneElement(child, { variants: transition });

@@ -12,13 +12,11 @@ import Layout from "./Layout";
 let Portfolio = ()=> {
   const breakpointColumnsObj = {
     default:4,
-    1200: 3,
-    700: 2,
-    500: 1
+    1200: 3
   };
   return(
     <Layout>
-      <motion.div initial="out" animate="in" exit="out">
+      <motion.div initial="out" animate="in" exit="out" className="portfolio-width">
       <div className="portfolio-container shadow-container">
       <SRLWrapper>
         <Masonry

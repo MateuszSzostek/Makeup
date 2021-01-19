@@ -4,7 +4,6 @@
 }
 html {
   font-size: 16px;
-  overflow-x: hidden;
 }
 
 body {
@@ -31,8 +30,8 @@ body {
 }
 
 .app-container {
-  max-width: 100vw;
-  width: 100vw;
+  max-width: 100%;
+  width: 100%;
 }
 
 .page-container {
@@ -176,10 +175,10 @@ body {
 }
 
 .home-text {
+  height: 100%;
   position: relative;
   width: auto;
   padding: 50px 100px 50px 50px;
-  background: url("../img/landingImg.jpg") no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -212,7 +211,7 @@ body {
   position: relative;
   width: 800px;
   padding: 50px 200px 50px 200px;
-  background: url("../img/landingImg.jpg") no-repeat;
+  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -270,7 +269,7 @@ body {
   letter-spacing: 18px;
   font-size: 1.7rem;
 }
-.home-image > img {
+.home-image > .gatsby-image-wrapper {
   position: relative;
   object-fit: cover;
   max-width: 100%;
@@ -326,6 +325,12 @@ body {
   width: 380px;
   background-color: #FFF9F3;
 }
+.content-card > .gatsby-image-wrapper {
+  width: 380px;
+  height: 340px;
+  min-height: 340px;
+  max-height: 340px;
+}
 .content-card img {
   width: 380px;
   height: 340px;
@@ -346,7 +351,6 @@ body {
 
 .card-link {
   height: 60px;
-  width: 100%;
   margin-left: 30px;
 }
 .card-link a {
@@ -366,14 +370,12 @@ body {
 .contact-form {
   z-index: 1;
   position: relative;
-  background: url("../img/landingImg.jpg") no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 600px;
-  background-color: #FFF9F3;
   box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
-  margin: 45px 0 45px 45px;
+  margin: 45px 0 45px 0px;
   padding: 30px 30px 20px 30px;
 }
 .contact-form h1, .contact-form label, .contact-form input[type=text], .contact-form textarea {
@@ -408,7 +410,6 @@ body {
 
 .contact-info {
   position: relative;
-  background: url("../img/landingImg.jpg") no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -537,12 +538,16 @@ textarea {
   padding: 5px;
   height: 20px;
   border-top: 1px lightgray solid;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   bottom: 0;
   left: 0;
   color: #FFF9F3;
   background-color: #AA81AA;
+}
+
+.portfolio-width {
+  width: 100%;
 }
 
 .bottom-links {
@@ -654,6 +659,11 @@ textarea {
   display: none;
 }
 
+.contact-square-background {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 .arrow {
   display: none;
 }
@@ -674,15 +684,20 @@ textarea {
 }
 
 @media only screen and (max-width: 1200px) {
+  .my-masonry-grid_column {
+    padding-left: 10px;
+    /* gutter size */
+  }
+
   .portfolio-container {
-    margin: 0 20px 100px 20px;
+    margin: 0 0 100px 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     padding-top: 30px;
   }
 
   .offer-text {
-    padding: 0 50px 0 50px;
+    padding: 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -696,10 +711,11 @@ textarea {
   .contact-form-container {
     display: flex;
     flex-direction: column;
+    padding-bottom: 40px;
   }
 
   .contact-info {
-    margin-bottom: 40px;
+    box-shadow: 0px 0px 50px 20px rgba(0, 0, 0, 0.25);
     height: 400px;
   }
 
@@ -729,7 +745,7 @@ textarea {
   }
 
   .content-container {
-    width: 100vw;
+    width: 100%;
   }
 
   .card-desc {
@@ -744,8 +760,10 @@ textarea {
 
   .example-work {
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
 
   .content-card {
@@ -759,12 +777,11 @@ textarea {
     margin-left: 50%;
     transform: translateX(-50%);
   }
-  .content-card img {
-    min-width: 240px;
-    height: 240px;
+  .content-card > .gatsby-image-wrapper {
+    max-height: 240px;
     min-height: 240px;
-    margin: 0;
-    object-fit: cover;
+    min-width: 240px;
+    min-height: 240px;
   }
   .content-card h3 {
     margin-top: 0;
@@ -797,16 +814,16 @@ textarea {
   }
 
   .section-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
   }
 
   .page-container {
-    width: 100vw;
+    width: 100%;
   }
 
   .offer-container {
-    width: 100vw;
+    width: 100%;
   }
 
   .nav-container {
@@ -871,7 +888,7 @@ textarea {
     display: flex;
     position: fixed;
     background-color: transparent;
-    width: 100vw;
+    width: 100%;
     bottom: 20px;
     z-index: 30;
   }
@@ -885,7 +902,7 @@ textarea {
 
   .nav-item.active {
     top: 0;
-    left: 100vw;
+    left: 100%;
     display: flex;
     position: fixed;
     flex-direction: column;
@@ -893,7 +910,7 @@ textarea {
     align-items: center;
     z-index: 20;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: #AA81AA;
     animation: slideMenu 0.3s ease-out;
     animation-fill-mode: forwards;
@@ -938,6 +955,10 @@ textarea {
 }
 
 @media only screen and (max-width: 1000px) {
+  .gatsby-image-wrapper {
+    max-width: 100px;
+  }
+
   .content-card img {
     max-width: 240px;
   }
@@ -947,6 +968,32 @@ textarea {
   }
 }
 @media only screen and (max-width: 690px) {
+  .contact-square-background {
+    margin-right: 0px;
+  }
+
+  .content-card > .gatsby-image-wrapper {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .contact-square-background {
+    margin-left: 0;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .contact-square-background::before {
+    left: 20%;
+    top: -30px;
+    content: "";
+    z-index: 0;
+    width: 60%;
+    height: 1130px;
+    position: absolute;
+    background-color: #AA81AA;
+  }
+
   .contact-decoration::before {
     display: none;
   }
@@ -957,14 +1004,14 @@ textarea {
   }
 
   .contact-info {
-    margin-bottom: 40px;
+    padding-bottom: 40px;
     height: 400px;
   }
 
   .contact-form {
     width: auto;
-    margin-right: 25px;
-    margin-left: 25px;
+    margin-right: 0px;
+    margin-left: 0px;
   }
   .contact-form div {
     width: 90%;
@@ -1028,6 +1075,14 @@ textarea {
   }
 }
 @media only screen and (max-width: 540px) {
+  .offer-text {
+    width: 100%;
+  }
+
+  .portfolio-container {
+    margin: 0;
+  }
+
   .arrow {
     animation: arrowAnim 3s ease-in-out infinite;
     position: absolute;
@@ -1039,13 +1094,11 @@ textarea {
   }
 
   .shadow-container {
-    background-color: unset;
-    box-shadow: unset;
+    background-color: #FFF9F3;
   }
 
   .contact-form {
     background-color: unset;
-    box-shadow: unset;
   }
   .contact-form::after {
     position: absolute;
@@ -1126,12 +1179,25 @@ textarea {
   }
 }
 @media only screen and (max-width: 500px) {
+  .my-masonry-grid {
+    margin-left: 0px;
+    /* gutter size offset */
+    margin-right: 10px;
+  }
+
+  .contact-square-background {
+    margin-left: 0px;
+  }
+  .contact-square-background::before {
+    height: 870px;
+  }
+
   .offer-text {
-    padding: 0 20px 0 20px;
     height: auto;
     min-height: 100vh;
   }
   .offer-text p {
+    padding: 0 20px 0 20px;
     font-size: 1rem;
   }
   .offer-text > div > h2 {
@@ -1155,19 +1221,21 @@ textarea {
   }
 
   .contact-form {
-    width: 100vw;
-    padding-right: 10px;
-    padding-left: 10px;
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
     margin: 0;
   }
   .contact-form h1 {
     font-size: 2.3rem;
+    margin: 0 40px 0 40px;
   }
 
   .contact-info {
     width: 100%;
     height: 300px;
     margin-bottom: 0px;
+    padding-bottom: 0px;
   }
   .contact-info h1, .contact-info p {
     margin: 5px 0 5px 0;
@@ -1208,17 +1276,13 @@ textarea {
   .content-card {
     flex-direction: column;
     height: 460px;
-    width: 90%;
-  }
-  .content-card img {
-    min-width: 100%;
-    height: 240px;
-    min-height: 240px;
-    margin: 0;
-    object-fit: cover;
   }
   .content-card h3 {
     font-size: 1.5rem;
+  }
+
+  .contact-form-container {
+    align-items: unset;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -1262,12 +1326,12 @@ textarea {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
 }
 @keyframes slideOutMenu {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0);

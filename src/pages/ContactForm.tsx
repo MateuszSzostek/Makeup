@@ -1,13 +1,33 @@
 import React from "react"
 import 'aos/dist/aos.css';
 import '../css/styles.css';
+import BackgroundImage from 'gatsby-background-image'
+import { useStaticQuery, graphql } from "gatsby";
 
+const  ContactForm = () => {
 
-export default function ContactForm() {
+  const data = useStaticQuery(graphql`
+  query MyQueryForm {
+    allImageSharp {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 2048, quality: 90){
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  
+}
+  `);
+
   return (
     <React.Fragment>
       <div className="contact-form-container">
-        <div className="">
+        <div className="contact-square-background">
+          <BackgroundImage 
+            fluid ={data.allImageSharp.edges[4].node.fluid}>
           <form action="" className="contact-form flex-container col justify-content-center align-items-center">
             <h1>LET'S MEET TOGETHER</h1>
             <div className="flex-container col">
@@ -30,7 +50,10 @@ export default function ContactForm() {
               <div className="message-info "></div>
             </div>
           </form>
+          </BackgroundImage>
         </div>
+        <BackgroundImage 
+            fluid ={data.allImageSharp.edges[4].node.fluid}>
         <div className="contact-info flex-container justify-content-center align-items-center">
           <div>
             <h1>Anna Dorsch</h1>
@@ -39,7 +62,9 @@ export default function ContactForm() {
             <p>08:00 - 15:00</p>
           </div>
         </div>
+        </BackgroundImage>
       </div>
     </React.Fragment>
   )
 }
+export default ContactForm;

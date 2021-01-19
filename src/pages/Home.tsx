@@ -10,17 +10,38 @@ import Arrow from '../img/down-arrow.svg';
 import { motion } from 'framer-motion';
 import ContactForm from './ContactForm';
 import Layout from "./Layout";
-
+import Img from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby";
+import BackgroundImage from 'gatsby-background-image'
 
 let Home = ()=>
 {
+  const data = useStaticQuery(graphql`
+  query MyQuery {
+    allImageSharp {
+      edges {
+        node {
+          id
+          fluid(maxWidth: 2048, quality: 90){
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  
+}
+  `);
   return (
+    
     <Layout>
       <motion.div initial="out" animate="in" exit="out" >
           <div className="section-container flex-container row ">
             <div className="home-image flex-container col">
-              <img src={LandingImg}></img>
+              <Img fluid={data.allImageSharp.edges[4].node.fluid}/>
             </div>
+            
+            <BackgroundImage  className="flex-container col justify-content-center align-items-center"
+            fluid ={data.allImageSharp.edges[4].node.fluid}>
             <div className="home-text flex-container col">
               <h2>Anna Dorsch</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit. Vivamus rhoncus tincidunt aliquam. Sed et mauris ut ex commodo faucibus. Integer sit amet porta felis. Aliquam pulvinar, odio eget dignissim egestas, lacus tortor dignissim urna, at ultricies ipsum quam pulvinar mi. Integer feugiat ante odio, id semper ipsum fermentum eget. Mauris a erat maximus, pulvinar sapien eu, hendrerit massa.</p>
@@ -28,10 +49,11 @@ let Home = ()=>
               <button className="btn mt-30">Contact Me</button>
               <img className="arrow" src ={Arrow}></img>
             </div>
+            </BackgroundImage>
           </div>
           <div className="example-work">
             <div className="content-card shadow-container flex-container">
-              <img src={TestImg1}></img>
+            <Img fluid={data.allImageSharp.edges[1].node.fluid}/>
               <div className="card-desc">
                 <h3>Sndard lorem ipsum</h3>
                 <p>Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum </p>
@@ -43,7 +65,7 @@ let Home = ()=>
               </div>
             </div>
             <div className="content-card shadow-container flex-container">
-              <img src={TestImg2}></img>
+            <Img fluid={data.allImageSharp.edges[3].node.fluid}/>
               <div className="card-desc">
                 <h3>Staard lorem ipsum</h3>
                 <p>Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum </p>
@@ -55,7 +77,7 @@ let Home = ()=>
               </div>
             </div>
             <div className="content-card shadow-container flex-container">
-              <img src={TestImg3}></img>
+            <Img fluid={data.allImageSharp.edges[6].node.fluid}/>
               <div className="card-desc">
                 <h3>Stanrd lorem ipsum</h3>
                 <p>Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum Standard lorem ipsum </p>
