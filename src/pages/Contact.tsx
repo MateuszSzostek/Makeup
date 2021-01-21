@@ -4,7 +4,6 @@ import '../css/styles.css';
 import {motion} from 'framer-motion';
 import ContactForm from "./ContactForm";
 import { RouteComponentProps } from "@reach/router";
-import Layout from "./Layout";
 import { useStaticQuery, graphql } from "gatsby";
 
 interface TransitionProps extends RouteComponentProps
@@ -31,13 +30,11 @@ let Contact = (props: TransitionProps)=> {
   `);
 
   return (
-    <Layout>
       <motion.div initial="out" animate="in" exit="out" variants={props.transition}>
       <div className="content-container flex-container row justify-content-between align-items-center contact-decoration mb-120">
         <ContactForm />
       </div>
       </motion.div>
-    </Layout>
   )
 }
   export default Contact;

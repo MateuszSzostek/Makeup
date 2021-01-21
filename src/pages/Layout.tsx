@@ -1,27 +1,26 @@
 import React, { useState } from "react"
-import {Link} from "gatsby";
-import AOS from "aos";
 import 'aos/dist/aos.css';
 import { AnimatePresence} from 'framer-motion';
 import '../css/styles.css'
-import FacebookImgL from '../img/facebook_light.svg';
-import InstagramImgL from '../img/instagram_light.svg';
-import PinterestImgL from '../img/pinterest_light.svg';
+import FacebookImgL from '../data/img/facebook.svg';
 import SimpleReactLightbox from 'simple-react-lightbox'
+import { useIntl, Link} from "gatsby-plugin-intl"
+import { Link as GatsbyLink } from 'gatsby';
 
 export default ({children}) => {
 
- 
-  
+  const intl = useIntl()
+  const locale = intl.locale !== "en" ? `/${intl.locale}` : ""
+
   let [menuOpen, setMenuOpen] = useState(false);
   let [menuClose, setMenuClose] = useState(false);
   let [menuHover, setMenuHover] = useState(false);
 
   let linksData = [
-    { id: 1, link: "/", page: "Home" },
-    { id: 2, link: "/Offer", page: "Offer" },
-    { id: 3, link: "/Portfolio", page: "Portfolio" },
-    { id: 4, link: "/Contact", page: "Contact" },
+    { id: 1, link: `/`, page: intl.formatMessage({ id: "home" }) },
+    { id: 2, link: `/Offer`, page: intl.formatMessage({ id: "offer" }) },
+    { id: 3, link: `/Portfolio`, page: intl.formatMessage({ id: "portfolio" }) },
+    { id: 4, link: `/Contact`, page: intl.formatMessage({ id: "contact" }) },
   ];
 
   function getWidth() {
@@ -107,9 +106,9 @@ export default ({children}) => {
               </div>
             </div>
             <div className={"social-media" + (menuOpen ? " active" : "")}>
+              <GatsbyLink to="/">PL</GatsbyLink>
+              <GatsbyLink to="/en">ENG</GatsbyLink>
               <img className="facebook-hover" src={FacebookImgL}></img>
-              <img className="instagram-hover" src={InstagramImgL}></img>
-              <img className="pinterest-hover" src={PinterestImgL}></img>
             </div>
             <div className={"menu-button" + (menuOpen ? " open" : "") +
               (menuHover ? " hover" : "")} 
@@ -135,7 +134,7 @@ export default ({children}) => {
         </div>
       </div>
       <div>
-        <footer className="footer">Created with passion by Mateusz Szostek</footer>
+        <footer className="footer">{intl.formatMessage({ id: "footer" })}</footer>
       </div>
     </SimpleReactLightbox>
   )
