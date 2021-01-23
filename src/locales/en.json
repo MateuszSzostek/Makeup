@@ -9,9 +9,9 @@
             "cardTitleOne" : "Lorem Ipsum",
             "cardTitleTwo" : "Lorem Ipsum",
             "cardTitleThree" : "Lorem Ipsum",
-            "cardDescriptionOne" : "Lorem Ipsum",
-            "cardDescriptionTwo" : "Lorem Ipsum",
-            "cardDescriptionThree" : "Lorem Ipsum",
+            "cardDescriptionOne" : "Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit.",
+            "cardDescriptionTwo" : "Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit.",
+            "cardDescriptionThree" : "Lorem Ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit.",
             "contactFormTitle" : "LET'S MEET TOGETHER",
             "name" : "Name",
             "emailAddress" : "Email address",
@@ -29,7 +29,13 @@
             "offerTextTwo_5" : "Nie trzyj skóry podczas zmywania - kosmetyki użyte do makijażu sa trwałe więc użyj jakiegoś olejku lub balsamu do demakijażu aby rozpuścić warstwy makijażu, następnie użyj ulubionego żelu do mycia twarzy",
             "offerTextTwo_6" : "To tylo makijaż będzie trwały ale wszelkie mechaniczne uszkodzenia jak pocieranie, dotykanie twarzy skróci jego trwałość",
             "footer" : "Created with passion by Mateusz Szostek",
-            "seeMore" : "See more"
+            "seeMore" : "See more",
+            "text-404": "Ooops, something went wrong, we could not find the page ;(",
+            "cooperateTitle" : "Cooperation",
+            "cooperateText" : "If you want to cooperate with me please call me or send me an email message.",
+            "privacy" : "Privacy",
+            "cooperation" : "Cooperation",
+            "facebook" : "Facebook"
    
       
 }

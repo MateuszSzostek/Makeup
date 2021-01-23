@@ -22,7 +22,7 @@ let Home = ()=>
           node {
             name
             childImageSharp {
-              fluid(maxWidth: 2048, quality: 90){
+              fluid(maxWidth: 1024, quality: 90){
                 ...GatsbyImageSharpFluid
               }
             }
@@ -32,69 +32,69 @@ let Home = ()=>
     }
   `);
 
-  
+  const pictureStyle = {
+    position: 'absolute',
+  };
   console.log(data);
 
   return (
     
       <motion.div initial="out" animate="in" exit="out" >
-          <div className="section-container flex-container row ">
-            <div className="home-image flex-container col">
-              <Img fluid={data.allFile.edges[6].node.childImageSharp.fluid}/>
-            </div>       
-            <BackgroundImage  className="flex-container col justify-content-center align-items-center"
-            fluid ={data.allFile.edges[5].node.childImageSharp.fluid}>
-            <div className="home-text flex-container col">
-              <h2>Anna Dorsch</h2>
-              <p>{intl.formatMessage({ id: "homePageDescription" })}</p>
-              <Link to ="/Contact"><button className="btn mt-30">{intl.formatMessage({ id: "contact" })}</button> </Link>
-            </div>
-            </BackgroundImage>
+        <section>
+        <div className="relative h-80vh flex col justify-center home-text-wrapper">
+          <h1 className="name text-xl mt-0 font-sofia">Anna Dorsch</h1>
+          <p className="text-base">{intl.formatMessage({ id: "homePageDescription_1" })}</p>
+          <p className="text-base mobile-off">{intl.formatMessage({ id: "homePageDescription_1" })}</p>
+          <Link to ="/Contact" className="text-base decoration-none">
+            {intl.formatMessage({ id: "contact" })}
+          </Link>
+        </div>
+ 
+        <div className="card-grid">
+          <div className="flex col card-left color-square-1 justify-center bg-first-card ">
+            <h3 className="text-xl text-right my-15 z-index-10">{intl.formatMessage({ id: "cardTitleOne" })}</h3>
+            <p className="text-base text-right z-index-10">{intl.formatMessage({ id: "cardDescriptionOne" })}</p>
+            <Link className="z-index-10 text-right decoration-none text-base" to ="/Portfolio">{intl.formatMessage({ id: "seeMore" })}</Link>
           </div>
-          <div className="example-work">
-            <div className="content-card shadow-container flex-container">
-            <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid}/>
-              <div className="card-desc">
-                <h3>{intl.formatMessage({ id: "cardTitleOne" })}</h3>
-                <p>{intl.formatMessage({ id: "cardDescriptionOne" })}</p>
-              </div>
-              <div className="card-link">
-              <Link to ="/Offer">
-                  <div className="btn">{intl.formatMessage({ id: "seeMore" })}</div>
-                </Link>
-              </div>
-            </div>
-            <div className="content-card shadow-container flex-container">
+          <div className="flex col card-image relative ">
             <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid}/>
-              <div className="card-desc">
-              <h3>{intl.formatMessage({ id: "cardTitleTwo" })}</h3>
-                <p>{intl.formatMessage({ id: "cardDescriptionTwo" })}</p>
-              </div>
-              <div className="card-link">
-              <Link to ="/Portfolio">
-                  <div className="btn">{intl.formatMessage({ id: "seeMore" })}</div>
-                </Link>
-              </div>
-            </div>
-            <div className="content-card shadow-container flex-container">
-            <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid}/>
-              <div className="card-desc">
-              <h3>{intl.formatMessage({ id: "cardTitleThree" })}</h3>
-                <p>{intl.formatMessage({ id: "cardDescriptionThree" })}</p>
-              </div>
-              <div className="card-link">
-              <Link to ="/Contact">
-                  <div className="btn">{intl.formatMessage({ id: "seeMore" })}</div>
-                </Link>
-              </div>
-            </div>
+            <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
           </div>
-          <div className="content-container flex-container row justify-content-between align-items-center contact-decoration mb-120 mt-60">
-            <ContactForm />
-          </div>
-        
-      </motion.div>
+        </div>
 
+        <div className="relative my-15 decoration-image">
+          <BackgroundImage style={pictureStyle} className=" l-0 w-100prec h-350 z-index-10" fluid ={data.allFile.edges[4].node.childImageSharp.fluid}>
+          </BackgroundImage>
+          <div className=" absolute l-0 w-100prec h-350 color-fog z-index-10"></div>
+          <div className="l-0 t-0 w-100prec h-350"></div>
+        </div>
+        <div className="card-grid">
+          <div className="flex col card-col-60 card-image relative">
+            <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid}/>
+            <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
+          </div>
+          <div className="flex col card-right color-square-2 justify-center">
+            <h3 className="text-xl my-15 z-index-10">{intl.formatMessage({ id: "cardTitleOne" })}</h3>
+            <p className="relative z-index-10">{intl.formatMessage({ id: "cardDescriptionOne" })}</p>
+            <Link className="z-index-10 decoration-none text-base" to ="/Offer">{intl.formatMessage({ id: "seeMore" })}</Link>
+            <div className="relative bg-second-card"></div>
+          </div>
+        </div>
+
+        <div className="card-grid">
+          <div className="flex col card-left color-square-1 justify-center bg-first-card ">
+            <h3 className="text-xl text-right my-15 z-index-10">{intl.formatMessage({ id: "cardTitleThree" })}</h3>
+            <p className="text-base text-right z-index-10">{intl.formatMessage({ id: "cardDescriptionThree" })}</p>
+            <Link className="z-index-10 text-right decoration-none text-base" to ="/Portfolio">{intl.formatMessage({ id: "seeMore" })}</Link>
+          </div>
+          <div className="flex col card-image relative ">
+            <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid}/>
+            <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
+          </div>
+        </div>
+        <ContactForm/>
+        </section>
+      </motion.div>
   )
 }
 export default Home;

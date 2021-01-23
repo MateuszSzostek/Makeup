@@ -29,11 +29,11 @@ let Portfolio = ()=> {
   `);
   const breakpointColumnsObj = {
     default:4,
-    1200: 3
+    1300: 3
   };
   return(
-      <motion.div initial="out" animate="in" exit="out" className="portfolio-width">
-      <div className="portfolio-container shadow-container">
+      <motion.div initial="out" animate="in" exit="out" className="w-100prec flex col align-center">
+      <div className="portfolio-container flex col justify-center">
       <SRLWrapper>
         <Masonry
           breakpointCols={breakpointColumnsObj}

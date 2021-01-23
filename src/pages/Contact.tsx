@@ -31,9 +31,7 @@ let Contact = (props: TransitionProps)=> {
 
   return (
       <motion.div initial="out" animate="in" exit="out" variants={props.transition}>
-      <div className="content-container flex-container row justify-content-between align-items-center contact-decoration mb-120">
         <ContactForm />
-      </div>
       </motion.div>
   )
 }
