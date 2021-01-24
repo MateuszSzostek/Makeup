@@ -54,13 +54,12 @@ const ContactForm = () => {
             </form>
           </section>
         </div>
-        <section>
           <div className="col flex w-100prec z-index-20 justify-center align-center text-center">
             <h1 className="font-sofia my-10 text-lg">Anna Dorsch</h1>
             <p className="my-10 text-base">anna.dorsch@interia.pl</p>
           </div>
           <div className=" absolute l-calc w-100vw contact-form-bg z-index-10"></div>
-        </section>
+       
       </div>
     </React.Fragment>
   )
