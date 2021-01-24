@@ -5,7 +5,9 @@ import Home from './Home';
 
 const App = () => {
   return (
-    <Home/>
+    <React.Fragment>
+      <Home />
+    </React.Fragment>
   )
 }
 export default App;

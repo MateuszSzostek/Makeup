@@ -193,6 +193,10 @@ body {
   left: calc((100vw - 1440px)/2 - (((100vw - 1440px)/2) * 2) );
 }
 
+.landing {
+  height: 800px;
+}
+
 .h-100vh {
   height: 100vh;
 }
@@ -395,6 +399,11 @@ body {
 
 .border-none {
   border: none;
+}
+
+.styled-link {
+  color: #1E1E1E;
+  border-bottom: 1px #1E1E1E;
 }
 
 .card-left {
@@ -739,6 +748,19 @@ input:-webkit-autofill {
   }
 }
 @media only screen and (max-width: 900px) {
+  .langLink {
+    color: white;
+  }
+
+  .faceBookImg {
+    filter: invert(100%);
+  }
+
+  .landing {
+    min-height: 500px;
+    height: 100vh;
+  }
+
   .logo {
     top: 0px;
     left: -15px;
@@ -831,7 +853,7 @@ input:-webkit-autofill {
   }
 
   .text-xl {
-    font-size: 3.5rem;
+    font-size: 3.1rem;
   }
 
   .menu-button {
@@ -914,7 +936,19 @@ input:-webkit-autofill {
     max-width: 100%;
   }
 }
+@media only screen and (max-height: 560px) and (max-width: 900px) {
+  .nav-link.active {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+}
 @media only screen and (max-width: 540px) {
+  .landing {
+    min-height: 500px;
+    height: 100vh;
+  }
+
   .card-image > .gatsby-image-wrapper {
     min-height: 300px;
     max-height: 300px;

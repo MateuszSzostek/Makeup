@@ -6,7 +6,16 @@
  */
 const path = require(`path`)
 module.exports = {
+  siteMetadata: {
+    title: "My MDX Blog", 
+    ddescription: "Welcome to my page about spa, beauty and personal care.",
+    url: "https://adress",
+    image: "urlobrazka",
+    author: "Anna Dorsch"
+
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

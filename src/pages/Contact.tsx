@@ -1,18 +1,19 @@
 import React from "react"
 import 'aos/dist/aos.css';
 import '../css/styles.css';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import ContactForm from "./ContactForm";
 import { RouteComponentProps } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
+import Head from "../components/Head";
+import { useIntl } from "gatsby-plugin-intl"
 
-interface TransitionProps extends RouteComponentProps
-{
-	 transition?: any;
+interface TransitionProps extends RouteComponentProps {
+  transition?: any;
 }
 
-let Contact = (props: TransitionProps)=> {
-
+let Contact = (props: TransitionProps) => {
+  const intl = useIntl()
   const data = useStaticQuery(graphql`
   query MyQueryContact{
     allImageSharp {
@@ -30,9 +31,15 @@ let Contact = (props: TransitionProps)=> {
   `);
 
   return (
-      <motion.div initial="out" animate="in" exit="out" variants={props.transition}>
-        <ContactForm />
-      </motion.div>
+    <React.Fragment>
+      <Head description="Feel free to contact me"
+        title={intl.formatMessage({ id: "contact" })} />
+      <section >
+        <motion.div initial="out" animate="in" exit="out" variants={props.transition}>
+          <ContactForm />
+        </motion.div>
+      </section>
+    </React.Fragment>
   )
 }
-  export default Contact;
+export default Contact;

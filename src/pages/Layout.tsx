@@ -1,15 +1,15 @@
 import React, { useState } from "react"
 import 'aos/dist/aos.css';
-import { AnimatePresence} from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import '../css/styles.css'
 import FacebookImgL from '../data/img/facebook.svg';
 import MakeupLogo from '../data/img/makeupLogo.svg';
 import SimpleReactLightbox from 'simple-react-lightbox'
-import { useIntl, Link} from "gatsby-plugin-intl"
+import { useIntl, Link } from "gatsby-plugin-intl"
 import { Link as GatsbyLink, useStaticQuery, graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image'
 
-export default ({children}) => {
+export default ({ children }) => {
 
   const data = useStaticQuery(graphql`
   query LayoutQuery {
@@ -44,8 +44,8 @@ export default ({children}) => {
   ];
   let footerLinksData = [
     { id: 1, link: `/Privacy`, page: intl.formatMessage({ id: "privacy" }) },
-    { id: 2, link: `/Facebook`, page: intl.formatMessage({ id: "facebook" }) },
-    { id: 3, link: `/Cooperartion`, page: intl.formatMessage({ id: "cooperation" }) },
+    { id: 2, link: `https://www.facebook.com/4-Beauty-Make-up-103016398450671`, page: intl.formatMessage({ id: "facebook" }) },
+    { id: 3, link: `/Cooperation`, page: intl.formatMessage({ id: "cooperation" }) },
     { id: 4, link: `/Home`, page: intl.formatMessage({ id: "home" }) },
     { id: 5, link: `/Offer`, page: intl.formatMessage({ id: "offer" }) },
     { id: 6, link: `/Portfolio`, page: intl.formatMessage({ id: "portfolio" }) },
@@ -58,18 +58,18 @@ export default ({children}) => {
 
   let handleClickMenuBtn = () => {
     console.log(getWidth());
-    if(getWidth() < 1200){
+    if (getWidth() < 1200) {
       if (!menuOpen) {
         setMenuOpen(true)
       }
       else {
         console.log("wlaczam sie ");
         setMenuClose(true);
-        setTimeout(()=>{
+        setTimeout(() => {
           setMenuOpen(false);
           setMenuClose(false);
         },
-        0)
+          0)
       }
     }
   }
@@ -84,28 +84,27 @@ export default ({children}) => {
     }
   }
   let handleClickLinkBtn = () => {
-    if(getWidth() < 1200)
-    {
+    if (getWidth() < 1200) {
       setMenuClose(true);
-    console.log("dzialam");
-    setTimeout(()=> {
-      setMenuOpen(false);
+      console.log("dzialam");
+      setTimeout(() => {
+        setMenuOpen(false);
         setMenuClose(false);
-      window.scrollTo(0,0);
-    },0);
+        window.scrollTo(0, 0);
+      }, 0);
     }
   }
 
-  let links = linksData.map(s => 
-      <Link key={s.id} to={s.link} onClick={(handleClickLinkBtn)}
-        className={"nav-link decoration-none pointer mx-15 text-center nav-link-hover" + ( menuOpen ?  " active " : " " )}>
+  let links = linksData.map(s =>
+    <Link key={s.id} to={s.link} onClick={(handleClickLinkBtn)}
+      className={"nav-link decoration-none pointer mx-15 text-center nav-link-hover" + (menuOpen ? " active " : " ")}>
       {s.page}
     </Link>)
-  let footerlinks = footerLinksData.map(s => 
+  let footerlinks = footerLinksData.map(s =>
     <Link key={s.id} to={s.link} onClick={(handleClickLinkBtn)}
-    className="decoration-none pointer mx-15 text-center z-index-10 text-sm color-black-90">
-  {s.page}
-</Link>)
+      className="decoration-none pointer mx-15 text-center z-index-10 text-sm color-black-90">
+      {s.page}
+    </Link>)
   const transition = {
     in: {
       y: "0px",
@@ -123,59 +122,65 @@ export default ({children}) => {
 
   let updatedChildren = React.Children.map(children,
     (child) => {
-        return React.cloneElement(child, { variants: transition });
+      return React.cloneElement(child, { variants: transition });
     });
 
-    const backgroundStyle = {
-      position: 'fixed'
-    };
+  const backgroundStyle = {
+    position: 'fixed'
+  };
 
   return (
     <SimpleReactLightbox>
       <div className="flex justify-center">
         <div className="container-1440 flex col relative">
-          <BackgroundImage style={backgroundStyle} className="l-0 t-0 w-100vw h-100vh" fluid ={data.allFile.edges[6].node.childImageSharp.fluid}>
+          <BackgroundImage style={backgroundStyle} className="l-0 t-0 w-100vw h-100vh" fluid={data.allFile.edges[6].node.childImageSharp.fluid}>
             <div className="l-0 t-0 w-100vw h-100vh color-fog-bg z-index-40"></div>
           </BackgroundImage>
-          <div className={"menu-button fixed pointer w-40 h-36 z-index-40" + (menuOpen ? " open" : "") +
-              (menuHover ? " hover" : "")} 
-              onMouseEnter={handleMouseEnterMenuBtn}
-              onClick={handleClickMenuBtn}
-              onMouseLeave={handleMouseLeaveMenuBtn}>
-              <div className="menu-element"></div>
-              <div className="menu-element"></div>
-              <div className="menu-element"></div>
-            </div>
           <div className="h-100vh">
-            <div className="flex justify-between relative nav-bar">
-              <div className="logo col border-radius-20 px-15 z-index-40">
-                <img src={MakeupLogo}></img>
+            <nav>
+              <div className={"menu-button fixed pointer w-40 h-36 z-index-40" + (menuOpen ? " open" : "") +
+                (menuHover ? " hover" : "")}
+                onMouseEnter={handleMouseEnterMenuBtn}
+                onClick={handleClickMenuBtn}
+                onMouseLeave={handleMouseLeaveMenuBtn}>
+                <div className="menu-element"></div>
+                <div className="menu-element"></div>
+                <div className="menu-element"></div>
               </div>
-              <div className={"mr-auto align-center nav-links" + (menuOpen ?  " active" : " ")}>
-                {links}
+              <div className="flex justify-between relative nav-bar">
+                <div className="logo col border-radius-20 px-15 z-index-40">
+                  <img src={MakeupLogo}></img>
+                </div>
+                <div className={"mr-auto align-center nav-links" + (menuOpen ? " active" : " ")}>
+                  {links}
+                </div>
+                <div className={"bg-purple-tr50 border-radius-20 px-15 justify-center align-center options " + (menuOpen ? " active" : " ")}>
+                  <GatsbyLink className="pointer decoration-none color-black-90 mx-5 langLink" to="/">PL</GatsbyLink>
+                  <GatsbyLink className="pointer decoration-none color-black-90 mx-5 langLink" to="/en">ENG</GatsbyLink>
+                  <GatsbyLink to="https://www.facebook.com/4-Beauty-Make-up-103016398450671"><img className="w-48 h-48 mx-10 pointer faceBookImg" src={FacebookImgL}></img></GatsbyLink>
+                </div>
               </div>
-              <div className={"bg-purple-tr50 border-radius-20 px-15 justify-center align-center options " + (menuOpen ? " active" : " ")}>
-                <GatsbyLink className="pointer decoration-none color-black-90 mx-5" to="/">PL</GatsbyLink>
-                <GatsbyLink className="pointer decoration-none color-black-90 mx-5" to="/en">ENG</GatsbyLink>
-                <img className="w-48 h-48 mx-10 pointer" src={FacebookImgL}></img>
-              </div>
-            </div>
-            <AnimatePresence exitBeforeEnter>
-              <div className="relative content-container">
-                {updatedChildren}    
-              </div>     
-            </AnimatePresence>   
-            <div className="flex col justify-center align-center w-100prec">
-              <div className="flex justify-center align-center text-center footer-marg row flex-wrap">
+            </nav>
+            <section>
+              <AnimatePresence exitBeforeEnter>
+                <div className="relative content-container">
+                  {updatedChildren}
+                </div>
+              </AnimatePresence>
+            </section>
+            <footer>
+              <div className="flex col justify-center align-center w-100prec">
+                <div className="flex justify-center align-center text-center footer-marg row flex-wrap">
                   {footerlinks}
+                </div>
+                <div className="flex justify-center align-center text-center z-index-10">
+                  <p className="z-index-10">Created with passion by Mateusz Szostek</p>
+                </div>
               </div>
-              <div className="flex justify-center align-center text-center z-index-10">
-                <p className="z-index-10">Created with passion by Mateusz Szostek</p>
-              </div>
-            </div>         
+            </footer>
           </div>
         </div>
-      </div> 
+      </div>
     </SimpleReactLightbox>
   )
 }
