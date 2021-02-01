@@ -831,7 +831,7 @@ input:-webkit-autofill {
   }
 
   footer {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .my-masonry-grid {
