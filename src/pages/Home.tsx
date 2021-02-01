@@ -8,6 +8,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import BackgroundImage from 'gatsby-background-image'
 import Head from "../components/Head";
 import { useIntl, Link } from "gatsby-plugin-intl"
+import {Link as GatsbyLink} from 'gatsby'
 
 let Home = () => {
   const intl = useIntl()
@@ -43,9 +44,8 @@ let Home = () => {
       <motion.div initial="out" animate="in" exit="out" >
         <section>
           <div className="relative landing flex col justify-center home-text-wrapper">
-            <h1 className="name text-xl mt-0 font-sofia">4 Beauty Make up</h1>
+            <h1 className="name text-xl my-5 font-sofia">4 Beauty Make up</h1>
             <p className="text-base">{intl.formatMessage({ id: "homePageDescription_1" })}</p>
-            <p className="text-base mobile-off">{intl.formatMessage({ id: "homePageDescription_1" })}</p>
             <Link to="/Contact" className="text-base styled-link">
               {intl.formatMessage({ id: "contactLink" })}
             </Link>
@@ -55,7 +55,7 @@ let Home = () => {
               <div className="flex col card-left color-square-1 justify-center bg-first-card ">
                 <h3 className="text-xl text-right my-15 z-index-10">{intl.formatMessage({ id: "cardTitleOne" })}</h3>
                 <p className="text-base text-right z-index-10">{intl.formatMessage({ id: "cardDescriptionOne" })}</p>
-                <Link className="z-index-10 text-right styled-link text-base" to="/Portfolio">{intl.formatMessage({ id: "seeMore" })}</Link>
+                <GatsbyLink className="z-index-10 text-right styled-link text-base" to="https://www.facebook.com/4-Beauty-Make-up-103016398450671">{intl.formatMessage({ id: "seeMore" })}</GatsbyLink>
               </div>
               <div className="flex col card-image relative ">
                 <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />

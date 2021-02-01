@@ -57,6 +57,9 @@ const ContactForm = () => {
           <div className="col flex w-100prec z-index-20 justify-center align-center text-center">
             <h1 className="font-sofia my-10 text-lg">Anna Dorsch</h1>
             <p className="my-10 text-base">anna.dorsch@interia.pl</p>
+            <p className="my-10 text-base"> {intl.formatMessage({ id: "openingHours_1" })}</p>
+            <p className="my-10 text-base"> {intl.formatMessage({ id: "openingHours_2" })}</p>
+            <p className="my-10 text-base"> {intl.formatMessage({ id: "openingHours_3" })}</p>
           </div>
           <div className=" absolute l-calc w-100vw contact-form-bg z-index-10"></div>
        

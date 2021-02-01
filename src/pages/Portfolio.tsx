@@ -13,8 +13,7 @@ let Portfolio = () => {
   const intl = useIntl();
   const data = useStaticQuery(graphql`
   query portfolioQuery {
-    
-      allFile(filter: {absolutePath: {regex: "/img/portfolio/"}}) {
+      allFile(filter: {absolutePath: {regex: "/img/portfolio/"}}, sort: {fields: name}) {
         edges {
           node {
             name

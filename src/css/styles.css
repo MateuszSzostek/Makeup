@@ -194,7 +194,7 @@ body {
 }
 
 .landing {
-  height: 800px;
+  height: 750px;
 }
 
 .h-100vh {
@@ -293,6 +293,10 @@ body {
 
 .ml-20 {
   margin-left: 20px;
+}
+
+.mb-10 {
+  margin-bottom: 10px;
 }
 
 .p-20 {

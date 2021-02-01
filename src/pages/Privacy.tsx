@@ -9,7 +9,7 @@ let Privacy = () => {
       <motion.div initial="out" animate="in" exit="out">
         <div className="flex col justify-center mt-100">
           <h3 className="">
-            Privacy Policy for ANNACOMPANY
+            Privacy Policy for 4BeautyMakeup
         </h3>
           <p className="">
             At ANNAWEBSITENAME, accessible from www.anna.uk.com, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by ANNAWEBSITENAME and how we use it.
@@ -24,22 +24,22 @@ let Privacy = () => {
             We are a Data Controller of your information.
         </p>
           <p className="">
-            ANNACOMPANY legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:
+          4BeautyMakeup legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Information we collect and the specific context in which we collect the information:
         <ul>
               <li>
-                ANNACOMPANY needs to perform a contract with you;
+              4BeautyMakeup needs to perform a contract with you;
           </li>
               <li>
-                You have given ANNACOMPANY permission to do so;
+                You have given 4BeautyMakeup permission to do so;
           </li>
               <li>
-                Processing your personal information is in ANNACOMPANY legitimate interests;
+                Processing your personal information is in 4BeautyMakeup legitimate interests;
           </li>
               <li>
-                ANNACOMPANY needs to comply with the law;
+              4BeautyMakeup needs to comply with the law;
           </li>
               <li>
-                ANNACOMPANY will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
+                4BeautyMakeup will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies.
           </li>
             </ul>
 

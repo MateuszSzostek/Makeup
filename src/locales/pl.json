@@ -5,8 +5,7 @@
             "portfolio" : "Portfolio",
             "contact" : "Kontakt",
             "contactLink" : "Umówmy się na spotkanie",
-            "homePageDescription_1" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit. Vivamus rhoncus tincidunt aliquam. Sed et mauris ut ex commodo faucibus. Integer sit amet porta felis. Aliquam pulvinar, odio eget dignissim egestas, lacus tortor dignissim urna, at ultricies ipsum quam pulvinar mi. Integer feugiat ante odio, id semper ipsum fermentum eget. Mauris a erat maximus, pulvinar sapien eu, hendrerit massa.Lorem ipsum dolor sit amet.",
-            "homePageDescription_2" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget aliquet elit. Vivamus rhoncus tincidunt aliquam. Sed et mauris ut ex commodo faucibus. Integer sit amet porta felis. Aliquam pulvinar, odio eget dignissim egestas, lacus tortor dignissim urna, at ultricies ipsum quam pulvinar mi. Integer feugiat ante odio, id semper ipsum fermentum eget. Mauris a erat maximus, pulvinar sapien eu, hendrerit massa.Lorem ipsum dolor sit amet.",
+            "homePageDescription_1" : "Cześć jestem Ania jestem pasjonatką makijażu. Makijaż daje mi możliwość wyrażenia siebie. Jeśli szukasz makijażu na sesje zdjęciową lub jakiekolwiek okoliczności napisz do mnie na messanger. Odpowiem na wszelkie pytania. Zapraszam rownież na mojego facebooka 4Beauty Make up. Buziaki Ania  😉",
             "send" : "Wyślij",
             "cardTitleOne" : "Lorem Ipsum",
             "cardTitleTwo" : "Lorem Ipsum",
@@ -24,12 +23,15 @@
             "offerTitleOne" : "MAKEUP",
             "offerTextOne" : "Makijaż ślubny, okolicznościowy lub sesyjny - 15f",
             "offerTitleTwo": "Prosze przeczytaj uważnie",
-            "offerTextTwo_1" : "Przed makijażem wyreguluj brwi. Makijaż z wyregulowanymi brwiami wygląda ładniej i estetyczniej",
+            "offerTextTwo_1" : "Przed makijażem wyreguluj brwi. Makijaż z wyregulowanymi brwiami wygląda ładniej i estetyczniej.",
             "offerTextTwo_2" : "Zrób delikatny peeling twarzy dzień przed makijażem. Pozbycie się martwego martwego naskórka powoduje że nakładane prokutky lepiej scalają sie ze soba. Pamiętaj jednak aby robić to deikatnie by nie podrażnic skóry.",
             "offerTextTwo_3" : "Na makijaż przychodzimy nieumalowane (chodzi rownież o brwi i tusz do rzes), ani nienakremowane. Twarz musi być 'bez niczego', dodatkowy demakijaż przedluży czas usługi.",
-            "offerTextTwo_4" : "Pamiętaj aby nie klaść sie spać w makijażu zawsze zmywaj go po zakończonej okoliczności na którą był wykonany ",
-            "offerTextTwo_5" : "Nie trzyj skóry podczas zmywania - kosmetyki użyte do makijażu sa trwałe więc użyj jakiegoś olejku lub balsamu do demakijażu aby rozpuścić warstwy makijażu, następnie użyj ulubionego żelu do mycia twarzy",
-            "offerTextTwo_6" : "To tylo makijaż będzie trwały ale wszelkie mechaniczne uszkodzenia jak pocieranie, dotykanie twarzy skróci jego trwałość",
+            "offerTextTwo_4" : "Pamiętaj aby nie klaść sie spać w makijażu zawsze zmywaj go po zakończonej okoliczności na którą był wykonany. ",
+            "offerTextTwo_5" : "Nie trzyj skóry podczas zmywania - kosmetyki użyte do makijażu sa trwałe więc użyj jakiegoś olejku lub balsamu do demakijażu aby rozpuścić warstwy makijażu, następnie użyj ulubionego żelu do mycia twarzy.",
+            "offerTextTwo_6" : "To tylko makijaż, będzie trwały ale wszelkie mechaniczne uszkodzenia jak pocieranie, dotykanie twarzy skróci jego trwałość.",
+            "offerTextTwo_7" : "Bądź na czas. Spóźnienie powyżej 20 min sprawi ze usługa nie zostanie wykonana.",
+            "offerTextTwo_8" : "Nie dojeżdżam do klientek.",    
+            "offerTextTwo_9" : "Buziaki Ania 😉",
             "footer" : "Created with passion by Mateusz Szostek",
             "seeMore" : "Zobacz więcej",
             "text-404": "Uuups, coś poszło nie tak, nie znaleźliśmy tej strony ;(",
@@ -37,6 +39,10 @@
             "cooperateText" : "Jeśli chcesz ze mną współpracować, proszę wyślij wiadomość email lub zadzwoń na numer telefonu podany w sekcji kontakt. Dziekuje!",
             "privacy" : "Prywatność",
             "cooperation" : "Współpraca",
-            "facebook" : "Facebook"
+            "facebook" : "Facebook",
+            "openingHours_1" : "Godziny otwarcia:",
+            "openingHours_2" : "Sob-Ndz pomiędzy",
+            "openingHours_3" : "10.00-14.00"
+
       
 }
