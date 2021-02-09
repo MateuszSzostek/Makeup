@@ -36,7 +36,7 @@ const ContactForm = () => {
       <div className="contact-grid justify-center relative">
         <div className="col w-100prec z-index-20">
           <section>
-            <form action="https://formspree.io/f/xyybowbj" method="POST" className="flex col contact-form ">
+            <form name="contact" method="POST" data-netlify="true" className="flex col contact-form ">
               <h1 className="text-lg">{intl.formatMessage({ id: "contactFormTitle" })}</h1>
               <div className="flex col ">
                 <label className="text-base mt-15">{intl.formatMessage({ id: "name" })}</label>
