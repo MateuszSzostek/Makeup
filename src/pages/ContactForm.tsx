@@ -36,7 +36,11 @@ const ContactForm = () => {
       <div className="contact-grid justify-center relative">
         <div className="col w-100prec z-index-20">
           <section>
-            <form name="contact" method="POST" data-netlify="true" className="flex col contact-form ">
+            <form 
+            method="post" netlify-honeypot="bot-field" data-netlify="true" name="contact"
+            className="flex col contact-form ">
+              <input type="hidden" name="bot-field" />
+              <input type="hidden" name="form-name" value="contact" />
               <h1 className="text-lg">{intl.formatMessage({ id: "contactFormTitle" })}</h1>
               <div className="flex col ">
                 <label className="text-base mt-15">{intl.formatMessage({ id: "name" })}</label>
@@ -44,7 +48,7 @@ const ContactForm = () => {
               </div>
               <div className="flex col">
                 <label className="text-base mt-15" >{intl.formatMessage({ id: "emailAddress" })}</label>
-                <input type="text" id="email" name="_replyto" placeholder={intl.formatMessage({ id: "emailAddressPlaceholder" })} ></input>
+                <input type="text" id="email" name="email" placeholder={intl.formatMessage({ id: "emailAddressPlaceholder" })} ></input>
               </div>
               <div className="flex col">
                 <label className="text-base mt-15" >{intl.formatMessage({ id: "message" })}</label>
