@@ -80,6 +80,7 @@ let Home = () => {
                 <div className="relative bg-second-card"></div>
               </div>
             </div>
+            
             <div className="card-grid">
               <div className="flex col card-left color-square-1 justify-center bg-first-card ">
                 <h3 className="text-xl text-right my-15 z-index-10">{intl.formatMessage({ id: "cardTitleThree" })}</h3>
