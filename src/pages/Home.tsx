@@ -74,8 +74,8 @@ let Home = () => {
                 <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
               </div>
               <div className="flex col card-right color-square-2 justify-center">
-                <h3 className="text-xl my-15 z-index-10">{intl.formatMessage({ id: "cardTitleOne" })}</h3>
-                <p className="relative z-index-10">{intl.formatMessage({ id: "cardDescriptionOne" })}</p>
+                <h3 className="text-xl my-15 z-index-10">{intl.formatMessage({ id: "cardTitleTwo" })}</h3>
+                <p className="relative text-base z-index-10">{intl.formatMessage({ id: "cardDescriptionTwo" })}</p>
                 <Link className="z-index-10 styled-link text-base" to="/Offer">{intl.formatMessage({ id: "seeMore" })}</Link>
                 <div className="relative bg-second-card"></div>
               </div>
