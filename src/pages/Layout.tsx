@@ -132,10 +132,10 @@ export default ({ children }) => {
   return (
     <SimpleReactLightbox>
       <div className="flex justify-center">
-        <div className="container-1440 flex col relative">
-          <BackgroundImage style={backgroundStyle} className="l-0 t-0 w-100vw h-100vh" fluid={data.allFile.edges[6].node.childImageSharp.fluid}>
+      <BackgroundImage style={backgroundStyle} className="l-0 t-0 w-100vw h-100vh" fluid={data.allFile.edges[6].node.childImageSharp.fluid}>
             <div className="l-0 t-0 w-100vw h-100vh color-fog-bg z-index-40"></div>
           </BackgroundImage>
+        <div className="container-1440 flex col relative">
           <div className="h-100vh">
             <nav>
               <div className={"menu-button fixed pointer w-40 h-36 z-index-40" + (menuOpen ? " open" : "") +
