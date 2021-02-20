@@ -48,7 +48,7 @@ let Offer = () => {
             <p className="my-5">{intl.formatMessage({ id: "offerTextTwo_9" })}</p>
           </div>
           <div className="flex offer-container col align-center justify-center card-image offer-image relative">
-            <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid} />
+            <Img fluid={data.allFile.edges[2].node.childImageSharp.fluid}  alt="Offer details"/>
             <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
           </div>
         </div>

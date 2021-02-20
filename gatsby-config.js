@@ -6,15 +6,17 @@
  */
 const path = require(`path`)
 module.exports = {
-  siteMetadata: {
+    siteMetadata: {
+    siteUrl: `https://4beautymakeup.com`,
     title: "My MDX Blog", 
-    ddescription: "Welcome to my page about spa, beauty and personal care.",
-    url: "https://adress",
+    description: "Welcome to 4BeautyMakeUp, website about spa, beauty and personal care. My services will make you look unique for every occasion. Write or call us and let's make an appointment.",
+    url: "https://4beautymakeup.com",
     image: "urlobrazka",
     author: "Anna Dorsch"
-
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt',
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-json`,
     {

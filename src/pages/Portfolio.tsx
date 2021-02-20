@@ -42,7 +42,7 @@ let Portfolio = () => {
               breakpointCols={breakpointColumnsObj}
               className="my-masonry-grid"
               columnClassName="my-masonry-grid_column">
-              {data.allFile.edges.map(s => <Img key={s.id} alt={"Sample Picture"} fluid={s.node.childImageSharp.fluid} />)}
+              {data.allFile.edges.map(s => <Img key={s.id} alt={"Sample Work"} fluid={s.node.childImageSharp.fluid} />)}
             </Masonry>
           </SRLWrapper>
         </div>

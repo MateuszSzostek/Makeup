@@ -41,7 +41,7 @@ const ContactForm = () => {
             className="flex col contact-form ">
               <input type="hidden" name="bot-field" />
               <input type="hidden" name="form-name" value="contact" />
-              <h1 className="text-lg">{intl.formatMessage({ id: "contactFormTitle" })}</h1>
+              <h2 className="text-lg">{intl.formatMessage({ id: "contactFormTitle" })}</h2>
               <div className="flex col ">
                 <label className="text-base mt-15">{intl.formatMessage({ id: "name" })}</label>
                 <input type="text" id="name" name="name" placeholder={intl.formatMessage({ id: "namePlaceholder" })} ></input>
@@ -59,8 +59,10 @@ const ContactForm = () => {
           </section>
         </div>
           <div className="col flex w-100prec z-index-20 justify-center align-center text-center">
-            <h1 className="font-sofia my-10 text-lg">Anna Dorsch</h1>
-            <p className="my-10 text-base">anna.dorsch@interia.pl</p>
+            <h3 className="font-sofia my-10 text-lg">Anna Dorsch</h3>
+            <address>
+              <p className="my-10 text-base">anna.dorsch@interia.pl</p>
+            </address>
             <p className="my-10 text-base"> {intl.formatMessage({ id: "openingHours_1" })}</p>
             <p className="my-10 text-base"> {intl.formatMessage({ id: "openingHours_2" })}</p>
             <p className="my-10 text-base"> {intl.formatMessage({ id: "openingHours_3" })}</p>

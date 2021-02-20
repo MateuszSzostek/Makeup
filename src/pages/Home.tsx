@@ -39,7 +39,7 @@ let Home = () => {
 
   return (
     <React.Fragment>
-      <Head description="Welcome to my page about spa, beauty and personal care."
+      <Head description="Welcome to 4BeautyMakeUp, website about spa, beauty and personal care. My services will make you look unique for every occasion. Write or call us and let's make an appointment."
         title={intl.formatMessage({ id: "home" })} />
       <motion.div initial="out" animate="in" exit="out" >
         <section>
@@ -58,19 +58,20 @@ let Home = () => {
                 <GatsbyLink className="z-index-10 text-right styled-link text-base" to="https://www.facebook.com/4-Beauty-Make-up-103016398450671">{intl.formatMessage({ id: "seeMore" })}</GatsbyLink>
               </div>
               <div className="flex col card-image relative ">
-                <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} />
+                <Img fluid={data.allFile.edges[1].node.childImageSharp.fluid} alt="Fanpage"/>
                 <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
               </div>
             </div>
             <div className="relative my-15 decoration-image">
-              <BackgroundImage style={pictureStyle} className=" l-0 w-100prec h-350 z-index-10" fluid={data.allFile.edges[4].node.childImageSharp.fluid}>
+              <BackgroundImage style={pictureStyle} className=" l-0 w-100prec h-350 z-index-10" fluid={data.allFile.edges[4].node.childImageSharp.fluid}
+              alt="Decoration">
               </BackgroundImage>
               <div className=" absolute l-0 w-100prec h-350 color-fog z-index-10"></div>
               <div className="l-0 t-0 w-100prec h-350"></div>
             </div>
             <div className="card-grid">
               <div className="flex col card-col-60 card-image relative">
-                <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid} />
+                <Img fluid={data.allFile.edges[3].node.childImageSharp.fluid}  alt="Offer" />
                 <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
               </div>
               <div className="flex col card-right color-square-2 justify-center">
@@ -88,7 +89,7 @@ let Home = () => {
                 <Link className="z-index-10 text-right styled-link text-base" to="/Portfolio">{intl.formatMessage({ id: "seeMore" })}</Link>
               </div>
               <div className="flex col card-image relative ">
-                <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid} />
+                <Img fluid={data.allFile.edges[0].node.childImageSharp.fluid}  alt="My work" />
                 <div className="color-fog absolute w-90prec h-90prec t-5prec l-5prec"></div>
               </div>
             </div>
