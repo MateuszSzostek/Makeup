@@ -39,7 +39,7 @@ let Home = () => {
 
   return (
     <React.Fragment>
-      <Head description="Welcome to 4BeautyMakeUp, website about spa, beauty and personal care. My services will make you look unique for every occasion. Write or call us and let's make an appointment."
+      <Head description="Welcome to 4BeautyMakeUp. My services will make you look unique for every occasion. Write or call us and let's make an appointment."
         title={intl.formatMessage({ id: "home" })} />
       <motion.div initial="out" animate="in" exit="out" >
         <section>

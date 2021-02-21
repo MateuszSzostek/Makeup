@@ -9,7 +9,7 @@ module.exports = {
     siteMetadata: {
     siteUrl: `https://4beautymakeup.com`,
     title: "My MDX Blog", 
-    description: "Welcome to 4BeautyMakeUp, website about spa, beauty and personal care. My services will make you look unique for every occasion. Write or call us and let's make an appointment.",
+    description: "Welcome to 4BeautyMakeUp. My services will make you look unique for every occasion. Write or call us and let's make an appointment.",
     url: "https://4beautymakeup.com",
     image: "urlobrazka",
     author: "Anna Dorsch"

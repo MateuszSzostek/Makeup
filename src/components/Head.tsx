@@ -18,8 +18,12 @@ const Head: React.FC<HeadProps> = (props) => {
         <base href = "adres strony" target="_blank"/>
         <meta name = "description" content={props.description}/>
         <meta name = "robots" content="index, follow" />
+        <meta name = "lang" content="en" />
       </Helmet>
     </React.Fragment>
   )
 }
 export default Head;
+
+
+
