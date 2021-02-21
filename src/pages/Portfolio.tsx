@@ -33,7 +33,7 @@ let Portfolio = () => {
   };
   return (
     <section>
-      <Head description="It is example of my work."
+      <Head description={intl.formatMessage({ id: "meta_portfolio" })}
         title={intl.formatMessage({ id: "portfolio" })} />
       <motion.div initial="out" animate="in" exit="out" className="w-100prec flex col align-center">
         <div className="portfolio-container flex col justify-center">

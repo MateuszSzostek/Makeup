@@ -32,7 +32,7 @@ let Contact = (props: TransitionProps) => {
 
   return (
     <React.Fragment>
-      <Head description="Feel free to contact me"
+      <Head description={intl.formatMessage({ id: "meta_contact" })}
         title={intl.formatMessage({ id: "contact" })} />
       <section >
         <motion.div initial="out" animate="in" exit="out" variants={props.transition}>

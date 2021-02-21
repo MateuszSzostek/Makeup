@@ -42,7 +42,14 @@
             "facebook" : "Facebook",
             "openingHours_1" : "Opening hours:",
             "openingHours_2" : "Sat-Sun between",
-            "openingHours_3" : "10.00-14.00"
+            "openingHours_3" : "10.00-14.00",
+
+            "meta_contact" : "This is Contact page. You can concact 4beautymakeup by filling up the form and sending message. you can also call me on the phone number provided. ",
+            "meta_cooperation" : "Feel free to cooperate with me. I am open to any cooperation proposals. Please fil up the form,  write to me or call me to arrange details. ",
+            "meta_portfolio" : "Here are my sample works of satisfied customers. The photo shows the makeup made by me, included in my website offer. Feel free to view photos.",
+            "meta_offer" : "See the prices of 4beautymakeup. You will also find steps on how to prepare for makeup. My offer is simple and I have the best prices in the region.",
+            "meta_home" : "Welcome to 4BeautyMakeUp. My services will make you look unique for every occasion. Write or call us and let's make an appointment."
+
    
       
 }

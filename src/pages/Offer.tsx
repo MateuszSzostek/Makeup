@@ -29,7 +29,7 @@ let Offer = () => {
 
   return (
     <section>
-      <Head description="Offer of 4 Beauty Make up."
+      <Head description={intl.formatMessage({ id: "meta_offer" })}
         title={intl.formatMessage({ id: "offer" })} />
       <motion.div initial="out" animate="in" exit="out">
         <div className="offer-grid mt-30">

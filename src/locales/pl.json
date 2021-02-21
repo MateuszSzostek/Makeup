@@ -2,7 +2,7 @@
  
             "home" : "Strona Główna",
             "offer" : "Oferta",
-            "portfolio" : "Portfolio",
+            "portfolio" : "Moje Przykładowe Prace",
             "contact" : "Kontakt",
             "contactLink" : "Umówmy się na spotkanie",
             "homePageDescription_1" : "Cześć jestem Ania jestem pasjonatką makijażu. Makijaż daje mi możliwość wyrażenia siebie. Jeśli szukasz makijażu na sesje zdjęciową lub jakiekolwiek okoliczności napisz do mnie na messanger. Odpowiem na wszelkie pytania. Zapraszam rownież na mojego facebooka 4Beauty Make up. Buziaki Ania  😉",
@@ -42,7 +42,14 @@
             "facebook" : "Facebook",
             "openingHours_1" : "Godziny otwarcia:",
             "openingHours_2" : "Sob-Ndz pomiędzy",
-            "openingHours_3" : "10.00-14.00"
+            "openingHours_3" : "10.00-14.00",
+
+            
+            "meta_contact" : "To jest strona kontaktowa. Możesz skontaktować się z 4beauty makeup wypełniając formularz i wysyłając wiadomość. Możesz również zadzwonić pod podany numer telefonu. ",
+            "meta_cooperation" : "Zapraszam do współpracy. Jestem otwarta na wszelkie propozycje współpracy. Proszę wypełnić formularz, napisać lub zadzwonić w celu ustalenia szczegółów. ",
+            "meta_portfolio" : "Oto moje przykładowe prace zadowolonych klientów. Zdjęcia przedstawiją wykonany przeze mnie makijaż, zawarty w mojej ofercie internetowej. Zapraszam do oglądania zdjęć.",
+            "meta_offer" : "Zobacz ceny 4beautymakeup. Znajdziesz tu również instrukcje, jak przygotować się do makijażu. Moja oferta jest prosta i mam najlepsze ceny w regionie.",
+            "meta_home" : "Witamy w 4BeautyMakeUp. Moje usługi sprawią, że będziesz wyglądać wyjątkowo na każdą okazję. Napisz lub zadzwoń i umów się na spotkanie."
 
       
 }

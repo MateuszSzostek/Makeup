@@ -10,7 +10,7 @@ let Privacy = () => {
   const intl = useIntl();
   return (
     <section>
-      <Head description="Feel free to cooperate with me."
+      <Head description={intl.formatMessage({ id: "meta_cooperation" })}
         title={intl.formatMessage({ id: "cooperation" })} />
       <motion.div initial="out" animate="in" exit="out">
         <div className="flex col justify-center align-center mt-100">

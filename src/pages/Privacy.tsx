@@ -2,10 +2,15 @@ import React from "react"
 import 'aos/dist/aos.css';
 import '../css/styles.css'
 import { motion } from 'framer-motion';
+import Head from "../components/Head";
+import { useIntl} from "gatsby-plugin-intl"
 
 let Privacy = () => {
+  const intl = useIntl();
   return (
     <section>
+            <Head description={intl.formatMessage({ id: "meta_privacy" })}
+        title={intl.formatMessage({ id: "privacy" })} />
       <motion.div initial="out" animate="in" exit="out">
         <div className="flex col justify-center mt-100">
           <h3 className="">

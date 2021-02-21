@@ -10,7 +10,7 @@ let ErrorPage = () => {
   const intl = useIntl()
   return (
     <React.Fragment>
-      <Head description="This page does not exists."
+      <Head description="This is 404 page. To contact me please visit 'Contact' page. To see my portfolio please go to 'Portfolio'. If you wish to seee prices, please go to 'Offer'."
         title="404" />
       <motion.div initial="out" animate="in" exit="out">
         <div className="flex col justify-center align-center">
