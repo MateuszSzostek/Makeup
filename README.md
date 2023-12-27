@@ -30,7 +30,7 @@ The website has the following features:
 To see the the live version of website please go to www.4beautymakeup.com.
 
 ### Author
-Teh website has been created by [Mateusz Szostek](https://www.linkedin.com/in/mateusz-szostek-351978143/).
+Teh website has been created by [CodeArtist](https://www.linkedin.com/in/mateusz-szostek-351978143/).
 
 ### License
 This project is licensed under the MIT License.

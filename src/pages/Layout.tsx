@@ -174,7 +174,7 @@ export default ({ children }) => {
                   {footerlinks}
                 </div>
                 <div className="flex justify-center align-center text-center z-index-10">
-                  <p className="z-index-10">Created with passion by Mateusz Szostek</p>
+                  <p className="z-index-10">Created with passion by CodeArtist</p>
                 </div>
               </div>
             </footer>
